@@ -4,7 +4,6 @@ const int channel = 9;
 
 const int LED = 14;
 const int POT = 15;
-
 const int DEBOUNCE_INTERVAL = 55;
 
 int level;
@@ -13,8 +12,6 @@ Bounce buttonC = Bounce();
 Bounce buttonD = Bounce();
 Bounce buttonE = Bounce();
 Bounce buttonF = Bounce();
-
-int val = 0;
 
 void setup() {
   buttonC.attach(1);
@@ -45,15 +42,16 @@ void setup() {
 }
 
 void loop() {
+  // get the volume level
   level = analogRead(POT);
-//  Serial.print("level at ");
-//  Serial.println(level);
-//  delay(250);
+  // do something w/ level...
 
   buttonC.update();
   buttonD.update();
   buttonE.update();
   buttonF.update();
+
+  usbMIDI.read();
 
   if (buttonC.fell()) {
     usbMIDI.sendControlChange(1, 127, channel);
@@ -88,10 +86,6 @@ void loop() {
     usbMIDI.sendControlChange(4, 0, channel);
     Serial.println("Played an F");
   }
-
-  usbMIDI.read();
-  
-  val = analogRead(POT);
 }
 
 
