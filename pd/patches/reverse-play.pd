@@ -1,0 +1,43 @@
+#N canvas 714 449 620 556 10;
+#X obj 151 64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 181 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 151 93 sel 0;
+#X msg 152 166 1;
+#X msg 182 166 -1;
+#X obj 80 126 loadbang;
+#X obj 152 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 11 6 reverse module;
+#X obj 151 35 inlet;
+#X obj 16 268 outlet;
+#X text 203 127 bang on toggle event;
+#X obj 16 35 inlet;
+#X obj 17 206 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 55 34 playing?;
+#X obj 79 246 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262130 -1 -1 0 256;
+#X obj 17 229 *;
+#X obj 80 206 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X text 190 34 reverse setting toggle;
+#X text 168 226 outputs: 0 if not playing -1 if playing in reverse
+1 if playing forward;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 0 12 0;
+#X connect 2 0 6 0;
+#X connect 2 1 1 0;
+#X connect 3 0 16 0;
+#X connect 4 0 16 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 6 0 12 0;
+#X connect 8 0 0 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 15 0 14 0;
+#X connect 15 0 9 0;
+#X connect 16 0 15 1;

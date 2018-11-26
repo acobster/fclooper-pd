@@ -1,0 +1,15 @@
+#N canvas 403 428 642 433 10;
+#X obj 20 13 inlet;
+#X obj 20 41 select 1;
+#X msg 20 64 bang;
+#X obj 20 92 outlet;
+#X msg 65 64 stop;
+#X obj 65 92 outlet;
+#X text 150 12 bangstop: toggle between bang and "stop" Connect a toggle
+to the inlet. Left and right outlets send bang and stop signals \,
+respectively.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
