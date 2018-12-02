@@ -1,4 +1,4 @@
-#N canvas 714 449 620 556 10;
+#N canvas 232 320 1102 685 10;
 #X obj 151 64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 181 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -23,8 +23,9 @@
 #X obj 80 206 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
 #X text 190 34 reverse setting toggle;
-#X text 168 226 outputs: 0 if not playing -1 if playing in reverse
-1 if playing forward;
+#X text 223 261 1 if playing normally;
+#X text 216 243 -1 if playing in reverse;
+#X text 168 225 outputs: 0 if not playing;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 1 0 12 0;
