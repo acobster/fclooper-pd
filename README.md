@@ -10,3 +10,11 @@ Looper proof-of-concept
 2. Open Tools > USB Type, select Serial + MIDI
 3. Open Tools > Port, select the option that mentions "Teensy"
 4. Maybe run Teensy installer? IDK
+
+## TODO
+
+* save loops to files
+* channels!!!
+* channel indicator
+* **automate smoothing**
+

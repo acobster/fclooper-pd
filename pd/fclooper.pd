@@ -1,6 +1,6 @@
-#N canvas 1366 60 1920 1020 10;
+#N canvas 694 87 1226 993 10;
 #X msg 36 471 \; pd dsp \$1;
-#X obj 36 440 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
+#X obj 36 440 tgl 15 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
 1;
 #X obj 134 448 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
 ;
@@ -43,10 +43,6 @@
 #X obj 152 184 samplerate~;
 #X obj 208 209 /;
 #X text 250 6 record a loop;
-#X text 163 409 TODO generate smoothing;
-#X text 352 32 TODO channel indicator;
-#X text 496 333 TODO save to file;
-#X text 496 363 TODO channels!!;
 #X obj 416 399 limiter~;
 #X obj 94 311 s~ mix;
 #X obj 363 399 z~ 16;
@@ -55,7 +51,6 @@
 #X obj 386 343 r~ mix;
 #X obj 430 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 262 278 TODO automate smoothing;
 #X obj 321 361 adc~ 1;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
@@ -76,7 +71,7 @@
 #X connect 18 0 7 0;
 #X connect 19 0 23 0;
 #X connect 21 0 14 0;
-#X connect 21 0 43 0;
+#X connect 21 0 39 0;
 #X connect 22 0 14 1;
 #X connect 23 0 18 0;
 #X connect 25 0 33 0;
@@ -94,11 +89,11 @@
 #X connect 34 1 36 1;
 #X connect 35 0 36 0;
 #X connect 36 0 18 1;
-#X connect 42 0 45 1;
-#X connect 44 0 45 0;
-#X connect 45 0 29 0;
-#X connect 46 0 42 0;
-#X connect 47 0 46 0;
-#X connect 48 0 46 1;
-#X connect 50 0 44 0;
-#X connect 50 0 42 0;
+#X connect 38 0 41 1;
+#X connect 40 0 41 0;
+#X connect 41 0 29 0;
+#X connect 42 0 38 0;
+#X connect 43 0 42 0;
+#X connect 44 0 42 1;
+#X connect 45 0 40 0;
+#X connect 45 0 38 0;
